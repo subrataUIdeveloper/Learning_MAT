@@ -1,0 +1,99 @@
+<!--=======================================================================
+        semantic tags Tags that describe meaning of content. 
+        ex:- <header>, <footer>, <article>, <section>, <nav>
+
+CRP = process of converting HTML → DOM + CSS → CSSOM → Render Tree → Paint
+
+                    CRP Optimization:
+
+                    Minimize render-blocking CSS
+                    Use defer for JS
+                    Inline critical CSS
+                    Lazy load images
+=========================================================================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- UTF-8, UTF-16, ASCII
+           ||
+           \/
+
+    Unicode Transformation Format – 8-bit
+charset works with a wide range of characters, including special symbols and emojis
+    Defines character encoding
+Prevents text issues -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Title tage works as the title of the page and
+    Shows in browser tab
+    Important for SEO -->
+    <title>Boolean Algebra</title>
+    <meta name="description" content="A simple example of boolean algebra in JavaScript">
+    <meta name="keywords" content="boolean algebra, JavaScript, logic, operators">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://subratacitytech.github.io">
+
+    <!--=====================================================
+                    Open Graph (Social Media) 
+     ======================================================-->
+    <meta property="og:title" content="My Website">
+    <meta property="og:description" content="Best site">
+    <meta property="og:image" content="image.jpg">
+
+    
+    <!--=====================================================
+                Twiter card (Social Media)
+     ======================================================-->
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <!--=====================================================
+                http equivalent to content type
+     ======================================================-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+</head>
+<body>
+    
+    <base href="https://subratacitytech.github.io/react_demo/">
+    <!-- <script src="booleanAlgebra.js"> -->
+        <p>!St:-</p>
+        <p id="demo"></p>
+
+  
+
+
+
+<script>
+
+//    ¬ ( A ∧ B ) = ( ¬A ) ∨ ( ¬B )  
+// not ( A and B) = (notA) or (notB)
+
+// ¬ ( A ∨ B ) = ( ¬A ) ∧ ( ¬B )  
+// not ( A or B) = (not A) and (not B)
+
+const is_admin = true; 
+const is_logged_in = false;
+let text;
+let result = !(is_admin && is_logged_in);
+switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+   default:
+    text = new Date().toString();
+   	alert(result);
+}
+document.getElementById("demo").innerHTML = text;
+
+// https://www.w3schools.com/js/pic_bulbon.gif
+// https://www.w3schools.com/js/pic_bulboff.gif
+</script>
+</body>
+</html>
