@@ -62,11 +62,22 @@ Prevents text issues -->
     <base href="https://subratacitytech.github.io/react_demo/">
     <!-- <script src="booleanAlgebra.js"> -->
         <p>!St:-</p>
+        <p id="date"></p>
         <p id="demo"></p>
 
-  
+    <img id="myImage" 
+        src="https://www.w3schools.com/js/pic_bulboff.gif" 
+        alt="Light Bulb" 
+        style="width:100px;cursor:pointer;"        
+    />
+    <button onclick = toggleImage()>Toggle Image</button>
 
 
+    <p id="logicalOperators">Logical Operators:-</p>
+
+    <div id="template_string"></div>
+
+    <ul id="loop"></ul>
 
 <script>
 
@@ -80,6 +91,11 @@ const is_admin = true;
 const is_logged_in = false;
 let text;
 let result = !(is_admin && is_logged_in);
+document.getElementById("logicalOperators").innerHTML += 
+"Result of !(is_admin && is_logged_in) is: " + result;
+
+
+
 switch (new Date().getDay()) {
   case 6:
     text = "Today is Saturday";
@@ -87,10 +103,79 @@ switch (new Date().getDay()) {
   case 0:
     text = "Today is Sunday";
    default:
-    text = new Date().toString();
-   	alert(result);
+    text = new Date().toString()
+    + "</br> " + 
+    new Date().toString().replace(/.{3}/, "")
+    + " " + 
+    new Date().toString().slice(4, 7) 
+    + " " + 
+    new Date().toString().slice(8, 10);
+
+   	// alert(result);
 }
-document.getElementById("demo").innerHTML = text;
+
+
+document.getElementById("date").innerHTML = text;
+
+/// TOURNARY OPERATOR
+const toggleImage = () => {
+    const image = document.getElementById("myImage");
+    image.src === "https://www.w3schools.com/js/pic_bulboff.gif"
+    ? image.src = "https://www.w3schools.com/js/pic_bulbon.gif" 
+    : image.src = "https://www.w3schools.com/js/pic_bulboff.gif";    
+};
+
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let arr = " ";
+
+
+//<!===============================LOOPS==============================!>
+
+//simple
+for(let i = 0; i < cars.length; i++){
+    arr += cars[i] + " ";
+}
+
+// type 2
+for(let i in cars){
+    arr +=  "</br>" + i + " : " + cars[i];
+}
+
+
+let i = 0;
+do{
+    arr += "<br>" + cars[i];
+    i++;
+}
+while(i < cars.length);
+
+document.getElementById("demo").innerHTML = arr;
+
+
+/*===============================TEMPLATE STRINGS===============================*/
+
+let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+
+
+
+let loop = "";
+
+for(let i = 0; i < tags.length; i++){
+           loop += `<li>` + tags[i] + `</li>`;
+        } 
+
+//map method is used to iterate over the array and create a list item for each tag
+let html = `
+    <h2>${header}</h2>
+    <ul> 
+        ${tags.map(tag => `<li>${tag}</li>`).join("")}
+    </ul>
+`;
+document.getElementById("loop").innerHTML += loop;
+document.getElementById("template_string").innerHTML += html;
 
 // https://www.w3schools.com/js/pic_bulbon.gif
 // https://www.w3schools.com/js/pic_bulboff.gif
