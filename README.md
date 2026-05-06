@@ -29,7 +29,9 @@ JS_MATH_BUSINESSLOGIC
 # Day 2 — React Basics
 
     Learn
-    What is React
+    ## What is React
+    ==> React is an open-source JavaScript library for building user interfaces or UI components,       developed by Facebook.
+
     SPA concept
     Components
     JSX
