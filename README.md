@@ -32,11 +32,20 @@ JS_MATH_BUSINESSLOGIC
     ## What is React
     ==> React is an open-source JavaScript library for building user interfaces or UI components, developed by Facebook.
 
-    SPA concept
-    Components
-    JSX
-    Functional components
-    Props
+    ## SPA concept
+    ==> A Single Page Application (SPA) is a web application where the entire website loads only once, and further page changes happen without reloading the browser. (Browser → React updates only changed components)
+
+    ## Components
+    ==> A Component is a reusable piece of UI in React. (Component Naming Rules: Start with capital letter)
+
+    ## JSX
+    ==> JSX (JavaScript XML) is a syntax extension for JavaScript that allows developers to write HTML-like code inside JavaScript in React applications.
+
+    ## Functional components
+    ==> Functional Components are simple JavaScript functions that return JSX, most commonly used way to create components in React
+
+    ## Props
+    ===> Props are used to pass data from a parent component to a child component. (Properties)
 
     Practice
 
