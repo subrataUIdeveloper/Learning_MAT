@@ -79,6 +79,8 @@ Prevents text issues -->
 
     <ul id="loop"></ul>
 
+    <p id="maxSum"></p>
+
 <script>
 
 //    ¬ ( A ∧ B ) = ( ¬A ) ∨ ( ¬B )  
@@ -176,6 +178,25 @@ let html = `
 `;
 document.getElementById("loop").innerHTML += loop;
 document.getElementById("template_string").innerHTML += html;
+
+
+let numbers = [-1, 2, 3, -9];
+
+function maxNumberSum(numbers){
+    let maxSum = 0;
+    for(let i = 0; i < numbers.length; i++){
+        let currentSum = 0;
+        for(let j = i; j < numbers.length; j++){
+            currentSum += numbers[j];
+            maxSum = Math.max(maxSum, currentSum);
+        }
+    }
+    return maxSum;
+}
+
+let maxSum = maxNumberSum(numbers);
+document.getElementById("maxSum").innerHTML += "<br>Maximum sum of contiguous subarray: " + maxSum;
+
 
 // https://www.w3schools.com/js/pic_bulbon.gif
 // https://www.w3schools.com/js/pic_bulboff.gif
