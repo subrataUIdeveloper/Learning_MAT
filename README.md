@@ -1,4 +1,4 @@
-# Learning_MAT
+Learning_MAT
 JS_MATH_BUSINESSLOGIC
 
 # Week 1 — React Fundamentals
@@ -281,3 +281,8 @@ Handle routing
 Create reusable components
 Answer React interview questions
 Build portfolio projects
+
+
+# git
+
+npm install gh-pages --save-dev
